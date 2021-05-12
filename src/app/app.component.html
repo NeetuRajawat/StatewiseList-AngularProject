@@ -1,3 +1,16 @@
-<app-all-state></app-all-state>
-<app-first-state></app-first-state>
-<app-second-state></app-second-state>
+<!-- <button (click)="getAllList()">All</button>
+<button (click)="getKarnaList()">Karnataka</button>
+<button (click)="getRajList()">Rajasthan</button>
+<button (click)="getGoaList()">Goa</button> -->
+
+<div class="example-button-row">
+<button mat-raised-button color="primary"  (click)="getAllList()">All</button>
+<button mat-raised-button color="accent" (click)="getKarnaList()">Karnataka</button>
+<button mat-raised-button color="primary" (click)="getRajList()">Rajasthan</button>
+<button mat-raised-button color="accent" (click)="getGoaList()">Goa</button>
+</div>
+
+<app-all-state *ngIf="showAllList"></app-all-state>
+<app-first-state *ngIf="showKarnatakList"></app-first-state>
+<app-second-state *ngIf="showRajList"></app-second-state>
+<app-third-state *ngIf="showGoaList"></app-third-state>
